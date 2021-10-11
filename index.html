@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+<body>
+    <title>अन्नपूर्णा</title>
+        
+        <style>
+          
+           .nav-item {
+             margin-right: 3rem;
+           }
+           
+           @import url('https://fonts.googleapis.com/css2?family=Tillana:wght@500&display=swap');
+           
+           /******for mobiles****/
+           @media (max-width:620px){
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+            visibility: hidden;
+            }
+            img{
+            height: 300px;
+            margin-left: 0%;
+            margin-right: 0%;
+            width:100%;
+            }
+            .carousel-control-prev,
+            .carousel-control-next{
+            visibility: hidden;
+            }
+            p{
+            width:100%;
+            margin-right: auto;
+            margin-left: auto;
+            font-size:150%;
+            }
+            .navbar-toggler {
+              background-color: white;
+              padding-top: 0.05rem;
+              padding-bottom: 0.05rem;
+              padding-right: 0.50rem;
+              padding-left: 0.50rem;
+            }
+           
+           
+          }
+        </style>
+    
+  </head>
+  <body style="background-color: rgba(255, 251, 251, 0.89);">
+      <nav class="navbar navbar-expand-lg" style="background-color: #2b2b2b;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" style="font-family: 'Tillana', cursive; font-size: 2rem; color: coral">
+            <b>
+              अन्नपूर्णा
+            </b>
+            <!-- PAY ATTENTION TO THE MOTTO LATER  -->
+            <br>            
+            <span class="navbar-brand" href="index.html" style="font-family: 'Ephesis', cursive; font-size: 2rem; color: coral">
+              Feed to Feel  
+            </span>
+          </a>
+          
+          <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" style="color: cornsilk;" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" style="color: cornsilk;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Donate Food
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 <li><a class="dropdown-item" href="findcollectors.html">Find collectors</a></li>
+                 <li><a class="dropdown-item" href="findcommunity.html">Find community fridges nearby</a></li>
+                 <li><a class="dropdown-item" href="findnearbyplaces.html">Find foundations/NGOs nearby</a></li>
+               </ul>
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" style="color: cornsilk;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 About Us
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 <li><a class="dropdown-item" href="#">Mission</a></li>
+                 <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                 <li><a class="dropdown-item" href="#">FAQ</a></li>
+               </ul>
+             </li>
+            </ul>
+         </div>
+       </div>
+      </nav>
+      <!-- PLOTLY GRAPH -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div id="myPlot1" style="margin-bottom: 0.50rem;"></div>
+
+          <script>
+            var x1Array = [2000, 2006, 2012, 2020];
+            var x2Array = [2000, 2006, 2012, 2020];
+            var x3Array = [2000, 2006, 2012, 2020];
+            var y1Array = [55, 46, 38, 35];
+            var y2Array = [18, 20, 15, 12];
+            var y3Array = [9, 7, 5, 3];
+
+
+
+            // Define Data
+            var data = [{
+                x: x1Array,
+                y: y1Array,
+                mode: "lines",
+                name: "Undernourished people"
+              },
+              {
+                x: x2Array,
+                y: y2Array,
+                mode: "lines",
+                name: "Wasting in children under 5 yrs"
+              },
+              {
+                x: x3Array,
+                y: y3Array,
+                mode: "lines",
+                name: "Stunting children under 5 yrs"
+              }
+            ];
+
+            //Define Layout
+            var layout = {
+              xaxis: {
+                range: [2000, 2020],
+                title: "Years"
+              },
+              yaxis: {
+                range: [0, 60],
+                title: "Proportion in percentage"
+              },
+              plot_bgcolor: "black",
+              paper_bgcolor: "black",
+              
+              font: {
+                color: "white",
+                family: "Arial"
+              }
+            };
+
+            // Display using Plotly
+            Plotly.newPlot("myPlot1", data, layout);
+          </script>
+        </div>
+        <div class="col-lg-6">
+          <div id="myPlot2"></div>
+
+          <script>
+            var xArray = ["Sri Lanka", "Myanmar", "Bangladesh", "India", "Pakistan"];
+            var yArray = [64, 78, 75, 94, 88];
+
+            var data = [{
+              x: xArray,
+              y: yArray,
+              type: "bar"
+            }];
+
+            var layout = {
+              title: "Global Hunger Index",
+              font: {
+                color: "white",
+                family: "Arial"
+              },
+              plot_bgcolor: "black",
+              paper_bgcolor: "black",
+            };
+
+            Plotly.newPlot("myPlot2", data, layout);
+          </script>
+        </div>
+      </div>
+      <!-- Our Vision CARD! -->
+      <div class="row">
+        <div class="col-lg-6">
+      <div class="card text-center" style="height: 770px;">
+        <div class="card-header">
+          <span style="font-size: 6rem; font-family: 'Tillana', cursive;">The <span style="color: coral;">अन्नपूर्णा's</span> Vision</span>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title">The Attitude of "Feed to Feel"</h1>
+          <p class="card-text">
+            Children are a country's future. For a developing country like India, the growth of poor children
+            is critical to the country's progress, and their education is the foundation of that success. 
+            However, children's education cannot be achieved without ensuring the family's well-being – a child can attend 
+            school on a regular basis only if the family, particularly the mother, is healthy and empowered; 
+            the child receives adequate nutrition; and the family has decent livelihood opportunities and a steady income.
+            Recognizing this, Annapurna has created a lifelong approach that covers the needs of children, their families, 
+            and the greater community, beginning in the corridors of education.
+            
+            Annapurna is convinced that permanent change will not occur unless civil society members are actively involved 
+            in the development process. Annapurna uses this Civic Driven Change strategy to educate and involve the civil 
+            society, making it an active participant in all of its humanitarian activities.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          Initiated 2021
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="/images/Screenshot from 2021-10-09 23-01-42.png" style="height:100%; width: 100%;">
+      </div>
+      <footer style="background-color: rgb(170, 170, 170); font-size: 1.3rem;">Site is still in Beta stage.</footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

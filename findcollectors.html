@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- my css and google font -->
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>अन्नपूर्णा</title>
+
+    <style>
+        .nav-item {
+            margin-right: 3rem;
+        }
+
+        .card-body{
+            background-color: burlywood
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Tillana:wght@500&display=swap');
+
+    /* Search bar CSS */
+    #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid rgb(248, 119, 119); /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    }
+
+    #myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    #myUL li b {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+    }
+
+    #myUL li b:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+    }
+        /******for mobiles****/
+        @media (max-width:620px) {
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                visibility: hidden;
+            }
+
+            footer {
+                color: aliceblue;
+
+                font-size: 70px;
+            }
+
+            img {
+                height: 300px;
+                margin-left: 0%;
+                margin-right: 0%;
+                width: 100%;
+
+            }
+
+            p {
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+                font-size: 100%;
+            }
+
+            h5 {
+                font-size: 200%
+            }
+
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgba(255, 251, 251, 0.89);">
+    <nav class="navbar navbar-expand-lg" style="background-color: #2b2b2b;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Tillana', cursive; font-size: 2rem; color: coral">
+                <b>
+                    अन्नपूर्णा
+                </b>
+                <br>            
+                <span class="navbar-brand" href="index.html" style="font-family: 'Ephesis', cursive; font-size: 2rem; color: coral">
+                  Feed to Feel  
+                </span>
+            </a>
+
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: cornsilk;" aria-current="page"
+                            href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            style="color: cornsilk;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Donate Food
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="findcollectors.html">Find collectors</a></li>
+                            <li><a class="dropdown-item" href="findcommunity.html">Find community fridges nearby</a>
+                            </li>
+                            <li><a class="dropdown-item" href="findnearbyplaces.html">Find foundations/NGOs nearby</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            style="color: cornsilk;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Mission</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="card text-center">
+
+        <div class="card-body">
+            <h2 class="card-title">Find someone to collect food</h2>
+            <p class="card-text" style="font-size:1.2rem;">Food banks and food collection NGOs have geared up to tackle the food
+                waste challenge in India’s major cities. They have set up waste leftover food helplines
+                so that restaurants, caterers, wedding venues and party organizers who intimate
+                availability of food for donation.Often such intimation is given at a late hour and pick up time is
+                also late i.e. after midnight. Despite these hurdles, these food banks and food collection
+                NGOs arrive at the venue, pack the food in containers and transport it in vehicles arranged by them.
+                This initiative was taken so that people who can't go themselves to donate food can just find volunteers
+                who can collect the food
+                from given location and then deliver it to the place needed!
+            </p>
+
+        </div>
+        <div class="card-footer text-muted">
+            Initiated 2021
+        </div>
+    </div>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for location..(e.g.Malad)">
+
+    <ul id="myUL">
+        <li><b>Community Development Centre-Malad</b><br>Collector Available-Raj<br><I>9167172849</I></li>
+        <li><b>Girija Foundation-Malad</b><br>Collector Available-Rohan<br><I>9122291303</I></li>
+        <li><b>Bal Asha Trust-Andheri</b><br>Collector Available-Yogesh<br><i>9126483833</i></li>
+        <li><b>The Power Of One Welfare Foundation-Andheri</b><br>Collector Available-Omkar<br><i>9123756489</i>
+        </li>
+        <li><b>NAR Foundation-Navi Mumbai</b><br>Collector Available-Kartik<br><i>9187654329</i></li>
+        <li><b>Nathani Charitable Trust-Navi Mumbai</b><br>Collector Available-Saurab<br><i>9165237894</i></li>
+    </ul>
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
+    </script>
+    <script>
+        function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("b")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            }
+            else {
+            li[i].style.display = "none";
+            }
+        }
+        }
+    </script>
+<footer style="background-color: rgb(170, 170, 170); font-size: 1.3rem;">Site is still in Beta stage.</footer>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
